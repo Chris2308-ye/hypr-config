@@ -61,22 +61,7 @@ hl.window_rule({
 
 
 
-hl.window_rule({
-    name    = "games-performance-and-clarity",
-    match   = {
-        -- Matches native games or titles running through Wine/Proton/XWayland
-        class = "^(steam_app_.*|wine|doto|csgo|hl2_linux|Minecraft.*|lutris|osu!)$"
-    },
 
-    -- Strip out background blur entirely for maximum focus and frame stability
-    no_blur = true,
-
-    -- Force the active game window to be completely 100% solid
-
-
-    -- Optional performance boost: tells Hyprland not to try blending layers behind this window
-    opaque = true,
-})
 
 hl.layer_rule({
     name = "rofi-popup",
@@ -87,11 +72,45 @@ hl.layer_rule({
 hl.layer_rule({
     name = "notification-animations",
     match = { namespace = "swaync-control-center" },
-    animation = "slide top"
+    animation = "slide bottom"
 })
 -- If you are using the Lua configuration format:
 hl.window_rule({
     name = "game-tearing",
     match = { class = "." }, -- matches any game window
     immediate = true,
+})
+
+-- Keeps games 100% solid, even if they lose focus or run in the background
+hl.window_rule({
+    name    = "games-performance-and-clarity",
+    match   = {
+        -- Matches native games or titles running through Wine/Proton/XWayland
+        class = "^(steam_app_.*|wine|doto|csgo|hl2_linux|Minecraft.*|lutris|osu!|Mesen|blender|vesktop|[Bb]rave.*)$"
+    },
+
+    -- Strip out background blur entirely for maximum focus and frame stability
+    no_blur = true,
+    opaque  = true,
+
+    -- First 1.0 forces active opacity, second 1.0 forces inactive override
+    opacity = "1.0 override 1.0 override",
+})
+
+-- Prevent Steam client windows from going transparent
+hl.window_rule({
+    name    = "steam-opacity-fix",
+    match   = { class = "^(steam)$" },
+
+    opaque  = true,
+    opacity = "1.0 override 1.0 override",
+})
+
+-- Prevent Zen Browser from going transparent
+hl.window_rule({
+    name    = "zen-browser-opacity-fix",
+    match   = { class = "^(zen-alpha|zen)$" },
+
+    opaque  = true,
+    opacity = "1.0 override 1.0 override",
 })
