@@ -1,0 +1,238 @@
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/*  Vertical Catpuccin Mocha */
+/*  As stated on title, best style for vertical layout waybar config */
+
+* {
+  font-family: "JetBrainsMono Nerd Font";
+  font-weight: bold;
+  min-height: 0;
+  /* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
+  font-size: 97%;
+  font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+}
+
+@import "/home/chris/.config/waybar/wallust/catppuccin.css";
+
+window#waybar {
+  background-color: @bg0;
+  border-radius: 0px;
+  border-bottom: 0px solid;
+  border-top: 0px solid @green;
+  border-left: 0px solid @bg67;
+  border-right: 0px solid @bg67;
+}
+
+tooltip {
+  background: @bg0;
+  opacity: 1;
+  border-radius: 0px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #2e3440;
+}
+
+tooltip label {
+  color: @aqua;
+}
+
+#taskbar button,
+#workspaces button {
+  color: @blue;
+  background-color: transparent;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 6px;
+  padding-left: 4px;
+}
+
+#taskbar button.active,
+#workspaces button.active {
+  border-bottom: 2px solid @fg;
+  border-radius: 0px;
+  padding-right: 4px;
+}
+
+#taskbar button.focused,
+#workspaces button.focused {
+  color: @grey1;
+  background: transparent;
+  border-radius: 15px;
+}
+
+#workspaces button.urgent {
+  color: #b0dae4;
+  background: transparent;
+  border-radius: 15px;
+}
+
+#taskbar button:hover,
+#workspaces button:hover {
+  background: transparent;
+  color: @grey0;
+  border-radius: 15px;
+}
+
+#backlight,
+#backlight-slider,
+#battery,
+#bluetooth,
+#clock,
+#cpu,
+#disk,
+#idle_inhibitor,
+#keyboard-state,
+#memory,
+#mode,
+#mpris,
+#network,
+#power-profiles-daemon,
+#pulseaudio,
+#pulseaudio-slider,
+#taskbar button,
+#taskbar,
+#temperature,
+#tray,
+#window,
+#wireplumber,
+#workspaces,
+#custom-backlight,
+#custom-browser,
+#custom-cava_mviz,
+#custom-cycle_wall,
+#custom-dot_update,
+#custom-file_manager,
+#custom-keybinds,
+#custom-keyboard,
+#custom-light_dark,
+#custom-lock,
+#custom-hint,
+#custom-hypridle,
+#custom-menu,
+#custom-playerctl,
+#custom-power_vertical,
+#custom-power,
+#custom-quit,
+#custom-reboot,
+#custom-settings,
+#custom-spotify,
+#custom-swaync,
+#custom-tty,
+#custom-updater,
+#custom-hyprpicker,
+#custom-weather,
+#custom-weather.clearNight,
+#custom-weather.cloudyFoggyDay,
+#custom-weather.cloudyFoggyNight,
+#custom-weather.default,
+#custom-weather.rainyDay,
+#custom-weather.rainyNight,
+#custom-weather.severe,
+#custom-weather.showyIcyDay,
+#custom-weather.snowyIcyNight,
+#custom-weather.sunnyDay {
+  opacity: 1;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 6px;
+  padding-left: 6px;
+}
+
+#notify {
+  color: @fg;
+}
+
+#idle_inhibitor {
+  color: #b0dae4;
+}
+
+#mpris {
+  color: @rosewater;
+}
+
+#battery {
+  color: @blue;
+  padding-left: 15px;
+  border-radius: 15px 0 0 15px;
+}
+
+@keyframes blink {
+  to {
+    background-color: #ffffff;
+    color: #333333;
+  }
+}
+
+#battery.critical:not(.charging) {
+  color: @red;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#custom-lock,
+#custom-power {
+  color: @blue;
+  border-radius: 15px;
+  font-weight: bolder;
+  padding-left: 1px;
+}
+
+#network {
+  background-color: transparent;
+  color: @blue;
+}
+#bluetooth {
+  background-color: transparent;
+  color: @blue;
+}
+
+#backlight {
+  color: @blue;
+}
+
+#custom-weather {
+  color: @green;
+  border-radius: 15px;
+  background-color: transparent;
+}
+
+#custom-menu {
+  color: #89b4fa;
+}
+
+#pulseaudio {
+  background-color: transparent;
+  color: @blue;
+}
+
+#clock,
+#clock-calender {
+  color: @fg;
+}
+
+#backlight-slider slider,
+#pulseaudio-slider slider {
+  min-height: 7px;
+  min-width: 15px;
+  opacity: 0;
+  background-color: @text;
+  border-radius: 3px;
+  box-shadow: 1px 5px 6px 1px #272727;
+}
+
+#backlight-slider trough,
+#pulseaudio-slider trough {
+  min-height: 100px;
+  min-width: 7px;
+  border-radius: 5px;
+  background-color: @surface0;
+}
+
+#backlight-slider highlight,
+#pulseaudio-slider highlight {
+  min-width: 5px;
+  border-radius: 5px;
+  background-color: @blue;
+}
