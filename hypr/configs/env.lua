@@ -4,9 +4,9 @@
 
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
 
-hl.env("XCURSOR_THEME", "Bibata-Modern-Classic-Gruvbox")
+hl.env("XCURSOR_THEME", "catppuccin-frappe-dark-cursors")
 hl.env("XCURSOR_SIZE", "24")
-hl.env("HYPRCURSOR_THEME", "Bibata-Modern-Classic-Gruvbox")
+hl.env("HYPRCURSOR_THEME", "catppuccin-frappe-dark-cursors")
 hl.env("HYPRCURSOR_SIZE", "24")
 hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 hl.env("QT_QPA_PLATFORMTHEME", "qt5ct")

@@ -72,7 +72,7 @@ hl.layer_rule({
 hl.layer_rule({
     name = "notification-animations",
     match = { namespace = "swaync-control-center" },
-    animation = "slide bottom"
+    animation = "slide top"
 })
 -- If you are using the Lua configuration format:
 hl.window_rule({
