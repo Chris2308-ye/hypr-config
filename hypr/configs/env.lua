@@ -4,9 +4,9 @@
 
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
 
-hl.env("XCURSOR_THEME", "catppuccin-frappe-dark-cursors")
+hl.env("XCURSOR_THEME", "catppuccin-mocha-dark-cursors")
 hl.env("XCURSOR_SIZE", "24")
-hl.env("HYPRCURSOR_THEME", "catppuccin-frappe-dark-cursors")
+hl.env("HYPRCURSOR_THEME", "catppuccin-mocha-dark-cursors")
 hl.env("HYPRCURSOR_SIZE", "24")
 hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 hl.env("QT_QPA_PLATFORMTHEME", "qt5ct")
@@ -18,6 +18,7 @@ hl.env("GDK_BACKEND", "wayland,x11,*")
 hl.env("QT_QPA_PLATFORM", "wayland;xcb")
 hl.env("SDL_VIDEODRIVER", "wayland")
 hl.env("CLUTTER_BACKEND", "wayland")
+hl.env("XDG_MENU_PREFIX", "arch-")
 
 -- XDG Specifications
 hl.env("XDG_CURRENT_DESKTOP", "Hyprland")

@@ -6,7 +6,7 @@
 local terminal    = "alacritty"
 local fileManager = "dolphin"
 local menu        = "./.config/rofi/type-2/launcher.sh"
-local browser     = "brave"
+local browser     = "brave-origin"
 
 
 ---------------------
@@ -53,6 +53,26 @@ hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
+
+-- Resize windows
+hl.bind(mainMod .. " + SHIFT + left",  hl.dsp.window.resize({ x = -60, y = 0, relative = true }))
+hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.resize({ x = 60, y = 0, relative = true }))
+hl.bind(mainMod .. " + SHIFT + up",    hl.dsp.window.resize({ x = 0, y = -60, relative = true }))
+hl.bind(mainMod .. " + SHIFT + down",  hl.dsp.window.resize({ x = 0, y = 60, relative = true }))
+
+-- Move windows
+hl.bind(mainMod .. " + CTRL + left",  hl.dsp.window.move({ direction = "l" }))
+hl.bind(mainMod .. " + CTRL + right", hl.dsp.window.move({ direction = "r" }))
+hl.bind(mainMod .. " + CTRL + up",    hl.dsp.window.move({ direction = "u" }))
+hl.bind(mainMod .. " + CTRL + down",  hl.dsp.window.move({ direction = "d" }))
+
+
+-- Swap windows
+hl.bind(mainMod .. " + ALT + left",  hl.dsp.window.swap({ direction = "l" }))
+hl.bind(mainMod .. " + ALT + right", hl.dsp.window.swap({ direction = "r" }))
+hl.bind(mainMod .. " + ALT + up",    hl.dsp.window.swap({ direction = "u" }))
+hl.bind(mainMod .. " + ALT + down",  hl.dsp.window.swap({ direction = "d" }))
+
 
 -- Laptop multimedia keys with corrected SwayOSD flags
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("swayosd-client --output-volume raise"),
