@@ -150,7 +150,7 @@ tooltip label {
 }
 
 #battery {
-  color: @yellow;
+  color: @blue;
   padding-left: 15px;
   border-radius: 15px 0 0 15px;
 }
@@ -181,15 +181,15 @@ tooltip label {
 
 #network {
   background-color: transparent;
-  color: @aqua;
+  color: @blue;
 }
 #bluetooth {
   background-color: transparent;
-  color: @aqua;
+  color: @blue;
 }
 
 #backlight {
-  color: @aqua;
+  color: @blue;
 }
 
 #custom-weather {
@@ -204,7 +204,7 @@ tooltip label {
 
 #pulseaudio {
   background-color: transparent;
-  color: @yellow;
+  color: @blue;
 }
 
 #clock,
